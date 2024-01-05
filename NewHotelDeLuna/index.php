@@ -92,13 +92,13 @@ if(isset($_POST['send'])){
    $message = $_POST['message'];
    $message = filter_var($message, FILTER_SANITIZE_STRING);
 
-   $verify_message = $conn->prepare("SELECT * FROM `messages` WHERE name = ? AND email = ? AND number = ? AND message = ?");
+   $verify_message = $conn->prepare("SELECT * FROM `users` WHERE name = ? AND email = ? AND number = ? AND message = ?");
    $verify_message->execute([$name, $email, $number, $message]);
 
    if($verify_message->rowCount() > 0){
       $warning_msg[] = 'message sent already!';
    }else{
-      $insert_message = $conn->prepare("INSERT INTO `messages`(id, name, email, number, message) VALUES(?,?,?,?,?)");
+      $insert_message = $conn->prepare("INSERT INTO `users`(id, name, email, number, message) VALUES(?,?,?,?,?)");
       $insert_message->execute([$id, $name, $email, $number, $message]);
       $success_msg[] = 'message send successfully!';
    }

@@ -19,7 +19,7 @@ Features
 Instruction on how to run
 1. Download the source code and extract the zip file or clone it from GitHub.
 2. Download and install XAMPP, then start Apache and MySQL.
-3. Access phpMyAdmin in MySQL via the XAMPP Control Panel, create a new database named “hotel_db.”
+3. Access phpMyAdmin in MySQL via the XAMPP Control Panel, create a new database named “hotel_db”
 4. Import the SQL file located in the database folder of the source code.
 5. Copy and paste the source code to your local web server directory. For example, in XAMPP, it might be (‘C:\xampp\htdocs’).
 6. Open a web browser and navigate to the project (e.g., [http://localhost/hoteldeluna]).
